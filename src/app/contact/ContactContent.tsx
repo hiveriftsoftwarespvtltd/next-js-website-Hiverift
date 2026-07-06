@@ -28,7 +28,7 @@ import { submitContactForm } from "@/app/actions/contactActions";
 const offices = [
   {
     country: "India (HQ)",
-    address: "Karol Bagh, New Delhi, India 110005",
+    address: "3rd Floor, Right Portion House No. 8577 (New) / Plot No. XVI/6501 (Old), Ward No. XVI, New Rohtak Road, Karol Bagh, New Delhi – 110005",
     flag: "🇮🇳",
     icon: Building2,
     label: "Headquarters"
@@ -339,7 +339,7 @@ export default function ContactContent() {
                     </div>
                     <div>
                       <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Visit Us</p>
-                      <p className="text-sm text-gray-700 font-bold leading-relaxed">Karol Bagh, New Delhi – 110005</p>
+                      <p className="text-sm text-gray-700 font-bold leading-relaxed">3rd Floor, Right Portion House No. 8577 (New) / Plot No. XVI/6501 (Old), Ward No. XVI, New Rohtak Road, Karol Bagh, New Delhi – 110005</p>
                     </div>
                   </div>
 
@@ -348,8 +348,8 @@ export default function ContactContent() {
                       <Mail size={18} />
                     </div>
                     <div>
-                      <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Email CEO</p>
-                      <a href="mailto:ceo@hiverift.com" className="text-sm text-gray-900 font-bold hover:text-emerald-600">ceo@hiverift.com</a>
+                      <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Email Us</p>
+                      <a href="mailto:info@hiverift.com" className="text-sm text-gray-900 font-bold hover:text-emerald-600">info@hiverift.com</a>
                     </div>
                   </div>
                 </div>

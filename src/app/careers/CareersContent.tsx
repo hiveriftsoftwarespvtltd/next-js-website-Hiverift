@@ -67,7 +67,7 @@ const jobs = [
 ];
 
 const process = [
-  { step: "01", title: "Apply", desc: "Email your CV and a short note to careers@hiverift.com telling us who you are." },
+  { step: "01", title: "Apply", desc: "Email your CV and a short note to hello@hiverift.com telling us who you are." },
   { step: "02", title: "Screening Call", desc: "A 20-minute call with our HR team to understand your experience and expectations." },
   { step: "03", title: "Skills Assessment", desc: "A short take-home task (2-3 hours max) relevant to your role." },
   { step: "04", title: "Final Interview", desc: "A 45-minute interview with the department head about technical + cultural fit." }
@@ -91,7 +91,7 @@ export default function CareersContent() {
         <div className="absolute inset-0">
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtd29yayUyMG9mZmljZSUyMG1vZGVybiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzM5ODMwNDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Join the Hive"
+            alt="Join the Hiverift"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/95 via-emerald-900/90 to-slate-900/95"></div>
@@ -107,7 +107,7 @@ export default function CareersContent() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 rounded-full mb-6">
               <Briefcase size={16} className="text-emerald-400" />
               <span className="text-sm font-black text-emerald-400 tracking-widest uppercase">
-                Join the Hive
+                Join the Hiverift
               </span>
             </div>
             <h1 className="text-4xl md:text-7xl font-black text-white mb-6 leading-[1.1]">

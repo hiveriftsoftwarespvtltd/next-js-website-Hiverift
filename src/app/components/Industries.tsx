@@ -324,18 +324,16 @@ export function Industries() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.05 }}
                       onClick={() => setSelectedIndustry(index)}
-                      className={`cursor-pointer group transition-all duration-300 ${
-                        selectedIndustry === index
+                      className={`cursor-pointer group transition-all duration-300 ${selectedIndustry === index
                           ? "scale-105"
                           : "hover:scale-102"
-                      }`}
+                        }`}
                     >
                       <div
-                        className={`bg-white rounded-xl md:rounded-2xl p-3 md:p-4 border-2 transition-all duration-300 ${
-                          selectedIndustry === index
+                        className={`bg-white rounded-xl md:rounded-2xl p-3 md:p-4 border-2 transition-all duration-300 ${selectedIndustry === index
                             ? "border-emerald-500 shadow-lg shadow-emerald-500/20"
                             : "border-gray-200 hover:border-emerald-300 hover:shadow-md"
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center gap-2 md:gap-3">
                           <div
@@ -351,19 +349,17 @@ export function Industries() {
                           </div>
                           <ChevronRight
                             size={16}
-                            className={`text-gray-400 transition-all duration-300 md:hidden ${
-                              selectedIndustry === index
+                            className={`text-gray-400 transition-all duration-300 md:hidden ${selectedIndustry === index
                                 ? "text-emerald-500 rotate-90"
                                 : "group-hover:text-emerald-500 group-hover:translate-x-1"
-                            }`}
+                              }`}
                           />
                           <ChevronRight
                             size={20}
-                            className={`text-gray-400 transition-all duration-300 hidden md:block ${
-                              selectedIndustry === index
+                            className={`text-gray-400 transition-all duration-300 hidden md:block ${selectedIndustry === index
                                 ? "text-emerald-500 rotate-90"
                                 : "group-hover:text-emerald-500 group-hover:translate-x-1"
-                            }`}
+                              }`}
                           />
                         </div>
                       </div>

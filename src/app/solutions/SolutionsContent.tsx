@@ -212,12 +212,12 @@ export default function SolutionsContent() {
                         <industry.icon size={24} />
                       </div>
                     </div>
-                    
+
                     <div className="p-6 flex flex-col flex-grow">
                       <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors line-clamp-1">
                         {industry.name}
                       </h3>
-                      
+
                       <div className="space-y-4 flex-grow">
                         <div>
                           <div className="text-[10px] font-black text-rose-500 uppercase tracking-widest mb-1.5 flex items-center gap-2">
@@ -228,7 +228,7 @@ export default function SolutionsContent() {
                             {industry.problem}
                           </p>
                         </div>
-                        
+
                         <div>
                           <div className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-1.5 flex items-center gap-2">
                             <CheckCircle2 size={12} />

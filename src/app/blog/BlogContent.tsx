@@ -108,8 +108,8 @@ export default function BlogContent() {
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = activeCategory === "All" || post.category === activeCategory;
-    const matchesSearch = 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.desc.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
@@ -146,7 +146,7 @@ export default function BlogContent() {
               Insights, Ideas & <span className="text-emerald-400">Real Talk</span>
             </h1>
             <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto font-medium">
-              Practical advice for Indian businesses navigating websites, marketing, apps, and technology — written by the team that builds it every day.
+              Practical advice for Indian businesses navigating websites, marketing, apps, and technology written by the team that builds it every day.
             </p>
           </motion.div>
         </div>
@@ -246,9 +246,9 @@ export default function BlogContent() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full bg-slate-50 border-none rounded-xl py-4 pl-6 pr-14 text-sm font-bold text-gray-900 focus:ring-2 focus:ring-emerald-500 transition-all"
                   />
-                  <button 
+                  <button
                     className="absolute right-2 w-10 h-10 bg-emerald-600 text-white rounded-lg flex items-center justify-center hover:bg-emerald-700 transition-colors"
-                    onClick={() => {}} // Search is already live via onChange, button is decorative or can trigger focus
+                    onClick={() => { }} // Search is already live via onChange, button is decorative or can trigger focus
                   >
                     <Search size={18} />
                   </button>
@@ -323,7 +323,7 @@ export default function BlogContent() {
                 </div>
                 <p className="text-xs font-bold text-gray-500 leading-relaxed">
                   Our experts are here to help you grow your business.
-                </p> 
+                </p>
                 <div className="space-y-4 pt-2">
                   <div className="flex items-center gap-3 text-gray-900 font-black">
                     <Phone size={18} className="text-emerald-600" />

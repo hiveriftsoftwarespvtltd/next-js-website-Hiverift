@@ -5,5 +5,5 @@
 @import "tw-animate-css";
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+  /* Fonts are managed via next/font/google in layout.tsx */
 }

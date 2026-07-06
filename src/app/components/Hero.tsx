@@ -45,21 +45,7 @@ export function Hero() {
             transition={{ duration: 0.8 }}
             className="space-y-6 sm:space-y-8 lg:space-y-10 order-2 lg:order-1"
           >
-            {/* Badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-3"
-            >
-              <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-sm">
-                LIMITED TIME OFFER
-              </div>
-              <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 text-yellow-700 px-4 py-2 rounded-full text-xs sm:text-sm font-bold shadow-sm">
-                <Trophy className="w-4 h-4" />
-                FREE WEBSITE
-              </div>
-            </motion.div>
+
 
             {/* Main Headline */}
             <motion.h1

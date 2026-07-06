@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "motion/react";
-import { 
-  ArrowRight, 
-  Building2, 
-  Stethoscope, 
-  ShoppingBag, 
-  GraduationCap, 
-  Factory, 
-  Home, 
-  Utensils, 
-  Plane, 
-  Truck, 
-  Shield, 
-  Scale, 
+import {
+  ArrowRight,
+  Building2,
+  Stethoscope,
+  ShoppingBag,
+  GraduationCap,
+  Factory,
+  Home,
+  Utensils,
+  Plane,
+  Truck,
+  Shield,
+  Scale,
   Landmark,
   Sparkles,
   Zap
@@ -37,7 +37,7 @@ const industries = [
     icon: Stethoscope,
     title: "Healthcare & Life Sciences",
     headline: "Better Technology. Better Care.",
-    desc: "Digital health solutions built for Indian healthcare providers — ABDM ready.",
+    desc: "Digital health solutions built for Indian healthcare providers ABDM ready.",
     pains: ["Paper-based patient records", "No digital appointment system", "Disconnected labs, doctors, pharmacies", "Poor patient communication"],
     solutions: ["Telemedicine platforms", "ABDM-compliant patient apps", "Appointment & queue management", "Lab report portals"],
     results: ["-70% patient wait time", "4.8/5 patient satisfaction"]
@@ -55,7 +55,7 @@ const industries = [
     icon: GraduationCap,
     title: "Education & E-Learning",
     headline: "Teach Anyone. Anywhere. Anytime.",
-    desc: "Learning platforms built for Indian educators — from coaching centres to universities.",
+    desc: "Learning platforms built for Indian educators from coaching centres to universities.",
     pains: ["No digital infrastructure", "Low student engagement", "No progress tracking", "Manual fee collection"],
     solutions: ["LMS platforms (Live + Recorded)", "Student & parent portals", "Assessment & quiz engines", "Razorpay fee integration"],
     results: ["92% course completion", "85% engagement rate"]
@@ -138,7 +138,7 @@ export default function IndustriesContent() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[450px] md:h-[500px] overflow-hidden mt-20 md:mt-32 flex items-center py-12 md:py-0">
         <div className="absolute inset-0">
@@ -160,7 +160,7 @@ export default function IndustriesContent() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 rounded-full mt-5 ">
               <Zap size={16} className="text-emerald-400" />
               <span className="text-sm font-black text-emerald-400 tracking-widest uppercase">
-                Industry-Specific Solutions
+                Industry Specific Solutions
               </span>
             </div>
 
@@ -220,7 +220,7 @@ export default function IndustriesContent() {
                 <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all mb-6">
                   <ind.icon size={28} />
                 </div>
-                
+
                 <div className="mb-6">
                   <h3 className="text-2xl font-black text-gray-900 mb-2">{ind.title}</h3>
                   <p className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-4">{ind.headline}</p>
@@ -230,7 +230,7 @@ export default function IndustriesContent() {
                 <div className="space-y-6 flex-grow">
                   <div>
                     <h5 className="text-xs font-black text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-                       <span className="w-2 h-2 bg-red-400 rounded-full"></span> Pains Solved
+                      <span className="w-2 h-2 bg-red-400 rounded-full"></span> Pains Solved
                     </h5>
                     <div className="flex flex-wrap gap-2">
                       {ind.pains.slice(0, 2).map((p, i) => (
@@ -250,8 +250,8 @@ export default function IndustriesContent() {
                     ))}
                   </div>
                   <div className="flex items-center justify-between">
-                    <Link 
-                      href="/contact" 
+                    <Link
+                      href="/contact"
                       className="flex items-center gap-2 text-emerald-600 font-black text-xs uppercase tracking-widest hover:gap-3 transition-all"
                     >
                       View Details <ArrowRight size={14} />
@@ -270,10 +270,10 @@ export default function IndustriesContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-8">Ready to <span className="text-emerald-600">Lead Your Sector?</span></h2>
             <p className="text-xl text-gray-600 font-medium mb-12">
-              Let's build technology that actually understands your business challenges. 
+              Let's build technology that actually understands your business challenges.
               Book a session with our industry specialists.
             </p>
-            <Link 
+            <Link
               href="/contact"
               className="inline-flex items-center gap-3 px-10 py-5 bg-slate-900 text-white rounded-2xl font-black text-xl hover:bg-emerald-600 hover:scale-105 transition-all shadow-xl"
             >

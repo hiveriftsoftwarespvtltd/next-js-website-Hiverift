@@ -68,7 +68,7 @@ export default function PrivacyContent() {
             <div className="prose prose-lg max-w-none text-gray-600 font-medium leading-relaxed space-y-12">
               <div>
                 <h3 className="text-2xl font-black text-gray-900 mb-4">1. Who We Are</h3>
-                <p>HiveRift is operated by KhatuShyam Technologies, a company registered in India, with its principal office at Karol Bagh, New Delhi – 110005. For privacy matters, contact: info@hiverift.com</p>
+                <p>HiveRift is operated by KhatuShyam Technologies, a company registered in India, with its principal office at 3rd Floor, Right Portion House No. 8577 (New) / Plot No. XVI/6501 (Old), Ward No. XVI, New Rohtak Road, Karol Bagh, New Delhi – 110005. For privacy matters, contact: info@hiverift.com</p>
               </div>
 
               <div>
@@ -103,7 +103,7 @@ export default function PrivacyContent() {
                   </div>
                   <div className="flex items-center gap-4 text-left">
                     <div className="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-emerald-600 flex-shrink-0"><MapPin size={20}/></div>
-                    <span className="font-bold text-gray-900 leading-tight">Karol Bagh, New Delhi – 110005, India</span>
+                    <span className="font-bold text-gray-900 leading-tight">3rd Floor, Right Portion House No. 8577 (New) / Plot No. XVI/6501 (Old), Ward No. XVI, New Rohtak Road, Karol Bagh, New Delhi – 110005, India</span>
                   </div>
                 </div>
               </div>

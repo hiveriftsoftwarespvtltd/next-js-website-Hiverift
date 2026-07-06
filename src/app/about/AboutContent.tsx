@@ -73,8 +73,8 @@ export default function AboutContent() {
               >
                 <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1762341121032-510ad9df0ba6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc3dvbWFuJTIwb2ZmaWNlJTIwbW9kZXJufGVufDF8fHx8MTc3MDg4MTIwMXww&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Professional Business"
+                    src="/our-story.png"
+                    alt="Our Story"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/40 to-transparent"></div>
@@ -92,16 +92,13 @@ export default function AboutContent() {
                 </h2>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-medium">
                   <p>
-                    <span className="text-emerald-600 font-bold">HiveRift</span> began its journey as <span className="text-emerald-600 font-bold">KhatuShyam Technologies in 2019</span> — a small but passionate team with a clear vision: make great technology accessible to every business, not just large corporations.
+                    <span className="text-emerald-600 font-bold">HiveRift</span> was built with a simple mission: to make innovative technology accessible to businesses of every size. What started as a passionate team with a shared vision has grown into a trusted digital partner for startups, growing businesses, and established enterprises alike.
                   </p>
                   <p>
-                    Over the years, as we worked with clients ranging from first-time founders in Delhi to established enterprises in Mumbai and Bangalore, we saw the same pattern — businesses were struggling to find a technology partner who understood their budget, their market, and their growth ambitions.
+                    Working with clients across Delhi, Mumbai, Bangalore, and beyond, we recognized a common challenge — finding a technology partner that truly understands business goals, budgets, and long term growth. HiveRift was created to bridge that gap by delivering scalable, high-quality digital solutions tailored to each client's unique needs.
                   </p>
                   <p>
-                    That gap is exactly what HiveRift was built to fill. Today, operating under the unified identity of <span className="text-emerald-600 font-bold">HiveRift | KhatuShyam Technologies</span>, we are a full-service digital agency with <span className="text-gray-900 font-bold">50+ team members</span>, offices in New Delhi, USA, and Canada, and a client base spanning 10+ countries.
-                  </p>
-                  <p className="text-xl text-gray-900 font-bold border-l-4 border-emerald-500 pl-6 py-2 bg-emerald-50/50 rounded-r-xl">
-                    We’re more than a service provider, we’re your partner in <span className="text-emerald-600  decoration-emerald-500/30 underline-offset-4">digital growth partner</span> 
+                    Today, HiveRift is a full service digital agency with a team of <span className="text-gray-900 font-bold">50+ professionals</span>, offices in New Delhi, the USA, and Canada, and a growing client base across 10+ countries. From strategy and design to development and digital transformation, we help businesses turn ideas into impactful digital experiences.
                   </p>
                 </div>
               </motion.div>
@@ -443,6 +440,37 @@ export default function AboutContent() {
                 </div>
               </motion.div>
             </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 mt-16 pb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100"
+              >
+                <ImageWithFallback src="/driven1.png" alt="Driven by Innovation 1" className="w-full h-full object-cover" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100"
+              >
+                <ImageWithFallback src="/driven2.png" alt="Driven by Innovation 2" className="w-full h-full object-cover" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100"
+              >
+                <ImageWithFallback src="/driven3.png" alt="Driven by Innovation 3" className="w-full h-full object-cover" />
+              </motion.div>
+            </div>
+            
           </div>
         </div>
       </section>

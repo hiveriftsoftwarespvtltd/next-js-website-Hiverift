@@ -116,11 +116,11 @@ const otherServices = [
 ];
 
 const faqs = [
-  { q: "Is GST included in the displayed price?", a: "No. All prices shown are exclusive of GST. GST at 18% is added on top and shown separately on your invoice — as required by Indian GST law." },
+  { q: "Is GST included in the displayed price?", a: "No. All prices shown are exclusive of GST. GST at 18% is added on top and shown separately on your invoice  as required by Indian GST law." },
   { q: "What are your payment terms?", a: "We collect 50% before starting. The balance is due on delivery. For projects above Rs. 1 lakh, we use milestone billing: 50% start, 25% mid, 25% on go-live." },
   { q: "Do you offer EMI or instalment plans?", a: "For projects above Rs. 50,000, we can discuss a milestone-based payment structure. Contact us to discuss your requirement." },
   { q: "Can I upgrade my package later?", a: "Yes. You can upgrade from Starter to Business Pro at any time. The cost difference is adjusted and a new timeline is agreed." },
-  { q: "Is there a free trial for marketing retainers?", a: "We don't offer free trials, but we do offer a free 30-minute strategy session where we audit your current digital presence and give you actionable recommendations — no commitment required." },
+  { q: "Is there a free trial for marketing retainers?", a: "We don't offer free trials, but we do offer a free 30-minute strategy session where we audit your current digital presence and give you actionable recommendations  no commitment required." },
 ];
 
 function FAQItem({ q, a, defaultOpen = false }: { q: string, a: string, defaultOpen?: boolean }) {

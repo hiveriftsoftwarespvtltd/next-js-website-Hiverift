@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Inter } from "next/font/google";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import ScrollToTop from "./components/ScrollToTop";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "HiveRift - Global Software Engineering Agency",
@@ -74,7 +80,7 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className="antialiased">
+      <body className={`antialiased ${inter.variable}`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
