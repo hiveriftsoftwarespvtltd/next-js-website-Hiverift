@@ -1,4 +1,4 @@
-"use server";
+
 
 export async function submitContactForm(formData: FormData) {
   try {
