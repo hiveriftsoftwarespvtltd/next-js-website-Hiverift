@@ -60,7 +60,7 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: "legal-consultancy-delhi",
-    title: "Delhi Legal Consultancy — Brand Website + SEO",
+    title: "Delhi Legal Consultancy Brand Website + SEO",
     category: "Professional Services",
     industry: "Legal",
     description: "Transformed a 15+ year old offline consultancy into a digital leader, ranking #1 for high-intent keywords in Delhi NCR.",
@@ -124,7 +124,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "jaipur-handicrafts-ecommerce",
-    title: "Jaipur Handicrafts Brand — E-Commerce Website",
+    title: "Jaipur Handicrafts Brand E-Commerce Website",
     category: "Retail & E-Commerce",
     industry: "Handicrafts",
     description: "Enabled a local handicrafts business to reach customers across India with a tailored e-commerce infrastructure.",
@@ -188,7 +188,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "pune-realestate-crm",
-    title: "Pune-Based Real Estate Firm — Custom CRM",
+    title: "Pune-Based Real Estate Firm Custom CRM",
     category: "Real Estate",
     industry: "Real Estate",
     description: "Automated lead management for a mid-sized firm, reducing response time from 4 hours to just 8 minutes.",
@@ -246,13 +246,13 @@ const caseStudies: CaseStudy[] = [
     faqs: [
       { q: "How long did it take to build and deploy the custom CRM?", a: "The entire process, from initial audit to final deployment and team training, took 120 days, with the core automated WhatsApp features going live in the first 45 days." },
       { q: "How does the WhatsApp integration actually help sales agents?", a: "It removes the delay between lead capture and first contact. Agents no longer have to manually type messages; the system initiates a personalized greeting instantly, keeping the lead engaged while it's 'hot'." },
-      { q: "Can this system handle leads from multiple platforms like Facebook and Google?", a: "Absolutely. We built the CRM with a centralized API that aggregates leads from all sources—website forms, Facebook Ads, and Google Ads—into a single, scored dashboard for the team." },
+      { q: "Can this system handle leads from multiple platforms like Facebook and Google?", a: "Absolutely. We built the CRM with a centralized API that aggregates leads from all sources website forms, Facebook Ads, and Google Ads into a single, scored dashboard for the team." },
       { q: "Is the CRM accessible on mobile devices for agents on the field?", a: "Absolutely. The CRM is built with a mobile-first responsive design, and the WhatsApp integration allows agents to manage leads and respond to queries directly from their phones while visiting sites." }
     ]
   },
   {
     id: "ludhiana-garments-erp",
-    title: "Ludhiana Garments Manufacturer — Custom ERP",
+    title: "Ludhiana Garments Manufacturer Custom ERP",
     category: "Manufacturing",
     industry: "Garments",
     description: "Modernized a production unit with 120+ employees, reducing inventory wastage by 52% through real-time tracking.",
@@ -326,7 +326,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "mumbai-edtech-app",
-    title: "Mumbai EdTech Startup — Student Learning App",
+    title: "Mumbai EdTech Startup Student Learning App",
     category: "Education & E-Learning",
     industry: "Education",
     description: "Built a mobile-first learning ecosystem that boosted course completion rates from 19% to 78% in 3 months.",
@@ -400,7 +400,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "surat-diamond-merchant",
-    title: "Surat Diamond Merchant — Luxury Digital Showroom",
+    title: "Surat Diamond Merchant Luxury Digital Showroom",
     category: "Luxury & Retail",
     industry: "Luxury",
     description: "Digitized a high-value inventory for international buyers, securing Rs. 1.2Cr estimated pipeline in 90 days.",

@@ -13,7 +13,7 @@ export const quickAnswers: QuickAnswer[] = [
     slug: "what-is-digital-marketing",
     question: "What is digital marketing?",
     shortAnswer: "Digital marketing is the process of promoting your business online using SEO, social media, and ads to generate leads and sales.",
-    detailedAnswer: "Digital marketing is more than just social media posts; it's a comprehensive ecosystem designed to capture and convert attention. At HiveRift, we look at your business holistically—identifying where your customers spend their time and how to reach them with precision.",
+    detailedAnswer: "Digital marketing is more than just social media posts; it's a comprehensive ecosystem designed to capture and convert attention. At HiveRift, we look at your business holistically identifying where your customers spend their time and how to reach them with precision.",
     points: [
       "Search Engine Optimization (SEO) for organic visibility",
       "Pay-Per-Click (PPC) for instant lead generation",
@@ -28,7 +28,7 @@ export const quickAnswers: QuickAnswer[] = [
     slug: "why-website-important",
     question: "Why is a website important?",
     shortAnswer: "A website builds trust, increases visibility, and helps convert visitors into paying customers for your business.",
-    detailedAnswer: "In today's digital-first world, your website is your 24/7 salesperson. It's often the first touchpoint a customer has with your brand. A professionally designed website doesn't just look good—it functions as a conversion engine that qualifies leads and builds immediate credibility.",
+    detailedAnswer: "In today's digital-first world, your website is your 24/7 salesperson. It's often the first touchpoint a customer has with your brand. A professionally designed website doesn't just look good it functions as a conversion engine that qualifies leads and builds immediate credibility.",
     points: [
       "Establishes 24/7 online presence and credibility",
       "Serves as a central hub for all marketing efforts",

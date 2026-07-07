@@ -37,8 +37,8 @@ const websitePricing = [
 ];
 
 const marketingPricing = [
-  { service: "Starter", price: "7,999", gst: "1,440", total: "9,439", seo: "5 pages", keywords: "10", blog: "1/mo", social: "1 platform, 6 posts", ads: "—", meta: "—", report: "Basic", manager: "Shared", contract: "3 months" },
-  { service: "Growth", price: "14,999", gst: "2,700", total: "17,699", seo: "15 pages", keywords: "25", blog: "2/mo", social: "2 platforms, 12 posts", ads: "Up to Rs. 20K spend", meta: "—", report: "Standard", manager: "Shared", contract: "3 months" },
+  { service: "Starter", price: "7,999", gst: "1,440", total: "9,439", seo: "5 pages", keywords: "10", blog: "1/mo", social: "1 platform, 6 posts", ads: "-", meta: "-", report: "Basic", manager: "Shared", contract: "3 months" },
+  { service: "Growth", price: "14,999", gst: "2,700", total: "17,699", seo: "15 pages", keywords: "25", blog: "2/mo", social: "2 platforms, 12 posts", ads: "Up to Rs. 20K spend", meta: "-", report: "Standard", manager: "Shared", contract: "3 months" },
   { service: "Scale", price: "24,999", gst: "4,500", total: "29,499", seo: "25 pages", keywords: "50", blog: "4/mo", social: "3 platforms, 18 posts", ads: "Up to Rs. 50K spend", meta: "Included", report: "Full dashboard", manager: "Dedicated", contract: "6 months" },
   { service: "Dominate", price: "39,999", gst: "7,200", total: "47,199", seo: "Unlimited", keywords: "100+", blog: "8/mo", social: "4 platforms, 24 posts", ads: "Up to Rs. 1.5L spend", meta: "Included + A/B", report: "Executive + insights", manager: "Senior strategist", contract: "6 months" },
 ];

@@ -55,7 +55,7 @@ export function Hero() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 "
             >
               Grow Your Business <br />
-              With <span className="text-emerald-600">High-Converting</span> <br />
+              With <span className="text-emerald-600">High Converting</span> <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
                 Website Development
               </span>
@@ -69,7 +69,7 @@ export function Hero() {
               className="space-y-4"
             >
               <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-bold leading-relaxed max-w-2xl">
-                Get a <span className="text-emerald-600  decoration-emerald-200 underline-offset-4">High-Converting</span> website <br className="hidden sm:block" />
+                Get a <span className="text-emerald-600  decoration-emerald-200 underline-offset-4">High Converting</span> website <br className="hidden sm:block" />
                 with result driven marketing.
               </p>
 
@@ -100,7 +100,7 @@ export function Hero() {
                 className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-7 text-lg font-black rounded-full shadow-xl shadow-emerald-200 hover:shadow-2xl transition-all transform hover:scale-105 group w-full sm:w-auto"
               >
                 <Link href="/contact">
-                  Get Free Consultation
+                   Free Consultation
                   <ArrowRight className="mt-1 group-hover:translate-x-1 transition-transform" size={20} />
                 </Link>
               </Button>
@@ -125,47 +125,7 @@ export function Hero() {
           >
             <div className="relative w-full max-w-2xl lg:max-w-3xl">
               {/* Floating 100% Free Badge */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-10 -right-2 sm:-top-16 sm:-right-4 lg:-top-20 lg:-right-6 z-30"
-              >
-                <div className="relative group">
-                  {/* Outer Glow */}
-                  <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-2xl group-hover:bg-emerald-400/40 transition-all duration-700 animate-pulse"></div>
-
-                  {/* Badge */}
-                  <div className="relative w-32 h-32 sm:w-52 sm:h-52 bg-white/95 backdrop-blur-xl rounded-full shadow-[0_32px_64px_-16px_rgba(16,185,129,0.4)] flex flex-col items-center justify-center p-4 text-center border-2 border-emerald-50 ring-8 ring-white/50">
-
-                    {/* Rotating Ring */}
-                    <div className="absolute inset-3 border border-dashed border-emerald-200 rounded-full animate-[spin_15s_linear_infinite]"></div>
-
-                    {/* Content */}
-                    <div className="relative z-10 space-y-1 sm:space-y-2">
-
-                      <div className="flex flex-col items-center">
-                        <span className="text-xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-emerald-600 to-teal-600 leading-none">
-                          100%
-                        </span>
-                        <span className="text-lg sm:text-3xl font-black text-emerald-600 leading-none">
-                          FREE
-                        </span>
-                      </div>
-
-                      <div className="space-y-0.5">
-                        <div className="text-[9px] sm:text-sm font-black text-gray-900 uppercase tracking-tight leading-tight max-w-[90px] sm:max-w-[140px] mx-auto">
-                          BUSINESS CONSULTATION
-                        </div>
-
-                        <div className="text-[7px] sm:text-[11px] font-bold text-gray-500 leading-tight">
-                          To Help You Grow Online
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+             
 
               <div className="relative rounded-[2rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(16,185,129,0.2)] border-8 border-white bg-white">
                 <ImageWithFallback

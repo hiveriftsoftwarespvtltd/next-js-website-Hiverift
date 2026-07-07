@@ -67,7 +67,7 @@ const jobs = [
 ];
 
 const process = [
-  { step: "01", title: "Apply", desc: "Email your CV and a short note to hello@hiverift.com telling us who you are." },
+  { step: "01", title: "Apply", desc: "Email your CV and a short note to hr.tripti@hiverift.com telling us who you are." },
   { step: "02", title: "Screening Call", desc: "A 20-minute call with our HR team to understand your experience and expectations." },
   { step: "03", title: "Skills Assessment", desc: "A short take-home task (2-3 hours max) relevant to your role." },
   { step: "04", title: "Final Interview", desc: "A 45-minute interview with the department head about technical + cultural fit." }
@@ -114,7 +114,7 @@ export default function CareersContent() {
               Build the Future of <span className="text-emerald-400">Indian Tech</span>
             </h1>
             <p className="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto font-medium">
-              HiveRift is hiring curious, ambitious people who want to do the best work of their lives — and have fun doing it. Work with top global tech.
+              HiveRift is hiring curious, ambitious people who want to do the best work of their lives and have fun doing it. Work with top global tech.
             </p>
           </motion.div>
         </div>
@@ -201,7 +201,7 @@ export default function CareersContent() {
       <section className="py-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-black text-gray-900 mb-16 text-center">How to <span className="text-emerald-600">Apply</span></h2>
-          <div className="grid gap-16 relative before:absolute before:left-6 md:before:left-1/2 before:w-0.5 before:h-full before:bg-slate-100">
+          <div className="grid gap-16 relative before:absolute before:left-6 md:before:left-1/2 before:w-0.5 before:h-full before:bg-slate-300">
             {process.map((p, idx) => (
               <div key={idx} className={`relative flex flex-col md:flex-row items-start gap-12 md:gap-20 ${idx % 2 === 1 ? "md:flex-row-reverse text-left md:text-right" : ""}`}>
                 <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-12 h-12 bg-emerald-600 rounded-2xl text-white font-black flex items-center justify-center shadow-xl z-10 transition-transform hover:scale-110">

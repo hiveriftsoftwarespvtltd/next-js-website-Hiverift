@@ -117,7 +117,7 @@ export default function IndustryDetailPage() {
               transition={{ delay: 0.2 }}
               className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter leading-none"
             >
-              HiveRift — <br/>
+              HiveRift <br/>
               <span className="relative inline-block mt-2">
                 <span className="text-emerald-500">{industry.title}</span>
                 <span className="absolute -bottom-2 left-0 w-full h-3 bg-emerald-500/30 rounded-full -z-10"></span>

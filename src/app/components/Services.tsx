@@ -75,7 +75,7 @@ const services = [
     id: "data-annotation",
     icon: Database,
     title: "Data Annotation",
-    description: "High-precision training data with 99%+ label accuracy — image & video tagging, QA validation, and structured datasets for next-gen AI.",
+    description: "High-precision training data with 99%+ label accuracy image & video tagging, QA validation, and structured datasets for next-gen AI.",
     features: [
       "99%+ Label Accuracy",
       "Image & Video Tagging",
@@ -135,7 +135,7 @@ export function Services() {
           </h2>
 
           <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto font-medium leading-relaxed">
-            End-to-end digital solutions — from web development and AI to marketing and mobile apps.
+            End-to-end digital solutions from web development and AI to marketing and mobile apps.
           </p>
         </motion.div>
 

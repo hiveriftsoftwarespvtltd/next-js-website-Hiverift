@@ -40,7 +40,7 @@ export function Header() {
           {/* Left Side: Marketing Content (Swapped) */}
           <div className="hidden md:flex items-center gap-2 text-emerald-50">
             <Rocket size={14} />
-            <span className="opacity-90 font-medium bold">Helping Business grow online with smart strategies</span>
+            <span className="opacity-90 font-medium  bold">Helping Business grow online with smart strategies</span>
           </div>
 
           {/* Right Side: Social & Contact (Swapped) */}
@@ -164,9 +164,8 @@ export function Header() {
             <Link
               href="/contact"
               className="flex items-center gap-2 bg-emerald-600 text-white px-2 py-3 rounded-full hover:bg-emerald-700 transition-all font-black text-xs shadow-lg shadow-emerald-200 whitespace-nowrap"
-            >
-              <MessageSquare size={14} />
-              <span className="font-black tracking-tight">Get free consultation</span>
+            >              
+              <span className="font-black  tracking-tight ">Free Consultation</span>
             </Link>
           </div>
 

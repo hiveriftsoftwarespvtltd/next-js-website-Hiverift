@@ -95,7 +95,7 @@ export default function AboutContent() {
                     <span className="text-emerald-600 font-bold">HiveRift</span> was built with a simple mission: to make innovative technology accessible to businesses of every size. What started as a passionate team with a shared vision has grown into a trusted digital partner for startups, growing businesses, and established enterprises alike.
                   </p>
                   <p>
-                    Working with clients across Delhi, Mumbai, Bangalore, and beyond, we recognized a common challenge — finding a technology partner that truly understands business goals, budgets, and long term growth. HiveRift was created to bridge that gap by delivering scalable, high-quality digital solutions tailored to each client's unique needs.
+                    Working with clients across Delhi, Mumbai, Bangalore, and beyond, we recognized a common challenge finding a technology partner that truly understands business goals, budgets, and long term growth. HiveRift was created to bridge that gap by delivering scalable, high-quality digital solutions tailored to each client's unique needs.
                   </p>
                   <p>
                     Today, HiveRift is a full service digital agency with a team of <span className="text-gray-900 font-bold">50+ professionals</span>, offices in New Delhi, the USA, and Canada, and a growing client base across 10+ countries. From strategy and design to development and digital transformation, we help businesses turn ideas into impactful digital experiences.
@@ -124,7 +124,7 @@ export default function AboutContent() {
                 >
                   <div className="text-3xl font-black text-emerald-600 mb-1">{stat.value}</div>
                   <div className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-tight">{stat.label}</div>
-                  <div className="text-[10px] leading-tight font-bold text-gray-400 uppercase tracking-tighter opacity-80 group-hover:opacity-100">
+                  <div className="text-[11px] leading-tight font-bold text-gray-500 capitalize tracking-tight group-hover:text-gray-700 transition-colors">
                     {stat.desc}
                   </div>
                 </motion.div>
@@ -145,7 +145,7 @@ export default function AboutContent() {
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  To empower businesses across India and the world with innovative technology solutions that drive real growth, improve efficiency, and create lasting competitive advantage — at a price point that makes sense for the Indian market.
+                  To empower businesses across India and the world with innovative technology solutions that drive real growth, improve efficiency, and create lasting competitive advantage at a price point that makes sense for the Indian market.
                 </p>
               </motion.div>
 
@@ -161,7 +161,7 @@ export default function AboutContent() {
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  To be India's most trusted digital transformation partner — known not just for the quality of our work, but for the long-term success of every client we serve.
+                  To be India's most trusted digital transformation partner known not just for the quality of our work, but for the long-term success of every client we serve.
                 </p>
               </motion.div>
             </div>
@@ -178,7 +178,7 @@ export default function AboutContent() {
                 Our 3T <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Pillars</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Talent. Tailored. Trust — The foundation of everything we do
+                Talent. Tailored. Trust The foundation of everything we do
               </p>
             </motion.div>
 
@@ -213,7 +213,7 @@ export default function AboutContent() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 uppercase tracking-tight">TAILORED</h3>
                 <p className="text-teal-600 font-bold mb-3 tracking-tight">Built for Your Business, Not a Template</p>
                 <p className="text-gray-700 leading-relaxed">
-                  We do not believe in copy-paste solutions. Every project starts with understanding your business, your customers, and your goals — then we build from there.
+                  We do not believe in copy-paste solutions. Every project starts with understanding your business, your customers, and your goals then we build from there.
                 </p>
               </motion.div>
 
@@ -230,7 +230,7 @@ export default function AboutContent() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 uppercase tracking-tight">TRUST</h3>
                 <p className="text-cyan-600 font-bold mb-3 tracking-tight">Transparent, Reliable, Long-Term</p>
                 <p className="text-gray-700 leading-relaxed">
-                  We communicate clearly, deliver on time, and never hide behind fine print. Over 99% of our clients return for their next project — and that says everything.
+                  We communicate clearly, deliver on time, and never hide behind fine print. Over 99% of our clients return for their next project and that says everything.
                 </p>
               </motion.div>
             </div>
@@ -311,7 +311,7 @@ export default function AboutContent() {
                 {
                   icon: Target,
                   title: "Purpose-Driven",
-                  description: "We come to work every day focused on your success. Technology is just the means — your growth is the mission.",
+                  description: "We come to work every day focused on your success. Technology is just the means your growth is the mission.",
                 },
                 {
                   icon: Users,
@@ -321,12 +321,12 @@ export default function AboutContent() {
                 {
                   icon: Award,
                   title: "Always Raising the Bar",
-                  description: "Good enough is never enough. We review, refine, and improve — on every project, every sprint.",
+                  description: "Good enough is never enough. We review, refine, and improve on every project, every sprint.",
                 },
                 {
                   icon: Heart,
                   title: "You Come First",
-                  description: "Your priorities become our priorities. If something is not working, we fix it — proactively, not reactively.",
+                  description: "Your priorities become our priorities. If something is not working, we fix it proactively, not reactively.",
                 },
                 {
                   icon: Globe,
@@ -371,14 +371,14 @@ export default function AboutContent() {
                   <div className="space-y-4">
                     <div className="h-64 rounded-xl overflow-hidden shadow-lg">
                       <ImageWithFallback
-                        src="https://images.unsplash.com/photo-1759884247387-a5d791ffb2bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwdGVhbSUyMGNvZGluZ3xlbnwxfHx8fDE3NzA4NjAyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                        src="/driven1.png"
                         alt="Development Team"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="h-48 rounded-2xl overflow-hidden shadow-lg">
                       <ImageWithFallback
-                        src="https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2UlMjB0ZWFtfGVufDF8fHx8MTc3MDg3ODEwN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                        src="/driven2.png"
                         alt="Modern Workspace"
                         className="w-full h-full object-cover"
                       />
@@ -387,7 +387,7 @@ export default function AboutContent() {
                   <div className="space-y-4 mt-8">
                     <div className="h-48 rounded-2xl overflow-hidden shadow-lg">
                       <ImageWithFallback
-                        src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0JTIwY29uZmlkZW50fGVufDF8fHx8MTc3MDgzMjM3MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                        src="/driven3.png"
                         alt="Professional Team Member"
                         className="w-full h-full object-cover"
                       />
@@ -417,7 +417,7 @@ export default function AboutContent() {
                   Driven by Innovation
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  At HiveRift, we believe innovation isn't just about adopting the latest technology—it's about understanding how to apply it in ways that truly matter to your business.
+                  At HiveRift, we believe innovation isn't just about adopting the latest technology it's about understanding how to apply it in ways that truly matter to your business.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   From AI-powered solutions to custom software development, we combine cutting-edge tools with strategic thinking to create solutions that drive real results.
@@ -440,37 +440,6 @@ export default function AboutContent() {
                 </div>
               </motion.div>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 mt-16 pb-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100"
-              >
-                <ImageWithFallback src="/driven1.png" alt="Driven by Innovation 1" className="w-full h-full object-cover" />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100"
-              >
-                <ImageWithFallback src="/driven2.png" alt="Driven by Innovation 2" className="w-full h-full object-cover" />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-100"
-              >
-                <ImageWithFallback src="/driven3.png" alt="Driven by Innovation 3" className="w-full h-full object-cover" />
-              </motion.div>
-            </div>
-            
           </div>
         </div>
       </section>

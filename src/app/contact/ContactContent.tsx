@@ -223,7 +223,7 @@ export default function ContactContent() {
                       <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center font-black text-sm">HR</div>
                       <div>
                         <p className="font-bold text-sm">Founder & CEO</p>
-                        <p className="text-emerald-100 text-[10px]">HiveRift — Delhi HQ</p>
+                        <p className="text-emerald-100 text-[10px]">HiveRift Delhi HQ</p>
                       </div>
                     </div>
                   </div>
@@ -485,7 +485,7 @@ export default function ContactContent() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   You can forward your concerns to{" "}
                   <a href="mailto:ceo@hiverift.com" className="text-emerald-600 font-semibold hover:underline">
-                    ceo@hiverift.com
+                    info@hiverift.com
                   </a>{" "}
                   at any time and expect a prompt response. We are committed to providing you with our best services at all times.
                 </p>

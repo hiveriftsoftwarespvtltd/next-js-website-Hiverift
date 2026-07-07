@@ -15,14 +15,14 @@ const pillars = [
     icon: Zap,
     title: "TAILORED",
     subtitle: "Built for Your Business, Not a Template",
-    desc: "We do not believe in copy-paste solutions. Every project starts with understanding your business, your customers, and your goals — then we build from there.",
+    desc: "We do not believe in copy-paste solutions. Every project starts with understanding your business, your customers, and your goals then we build from there.",
     color: "teal"
   },
   {
     icon: Award,
     title: "TRUST",
     subtitle: "Transparent, Reliable, Long-Term",
-    desc: "We communicate clearly, deliver on time, and never hide behind fine print. Over 99% of our clients return for their next project — and that says everything.",
+    desc: "We communicate clearly, deliver on time, and never hide behind fine print. Over 99% of our clients return for their next project and that says everything.",
     color: "cyan"
   }
 ];
@@ -42,7 +42,7 @@ export function Pillars() {
             Our 3T <span className="text-emerald-600">Pillars</span>
           </h2>
           <p className="text-xl text-gray-500 font-medium max-w-3xl mx-auto">
-            Talent. Tailored. Trust — The foundation of everything we do
+            Talent. Tailored. Trust The foundation of everything we do
           </p>
         </motion.div>
 

@@ -7,7 +7,7 @@ const features = [
   {
     icon: Target,
     title: "ROI-Focused Solutions",
-    description: "Every project is measured by results — traffic, leads, conversions, and revenue. We don't just build; we grow your business.",
+    description: "Every project is measured by results traffic, leads, conversions, and revenue. We don't just build; we grow your business.",
     gradient: "from-emerald-500 to-teal-500",
   },
   {
@@ -25,7 +25,7 @@ const features = [
   {
     icon: Award,
     title: "Proven in India & Globally",
-    description: "5+ years, 387+ clients, 98% success rate. From Delhi startups to global enterprises — we have delivered it all.",
+    description: "5+ years, 387+ clients, 98% success rate. From Delhi startups to global enterprises we have delivered it all.",
     gradient: "from-teal-600 to-emerald-600",
   },
   {
@@ -37,7 +37,7 @@ const features = [
   {
     icon: CircleDollarSign,
     title: "Transparent Pricing",
-    description: "No hidden charges. No surprise invoices. What we quote is what you pay — with GST clearly stated upfront.",
+    description: "No hidden charges. No surprise invoices. What we quote is what you pay with GST clearly stated upfront.",
     gradient: "from-emerald-600 to-teal-600",
   },
 ];
@@ -68,7 +68,7 @@ export function WhyChooseUs() {
             Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">387+ Businesses</span> Choose HiveRift
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-            We combine technical expertise with business strategy to deliver solutions that actually grow your revenue — not just look good.
+            We combine technical expertise with business strategy to deliver solutions that actually grow your revenue not just look good.
           </p>
         </motion.div>
 
