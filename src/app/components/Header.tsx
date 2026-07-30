@@ -96,7 +96,7 @@ export function Header() {
               href="/about"
               className="text-gray-700 hover:text-emerald-600 hover:underline underline-offset-8 decoration-2 decoration-emerald-500/30 transition-all font-bold text-sm xl:text-base whitespace-nowrap tracking-wide"
             >
-              About
+              About US
             </Link>
             <Link
               href="/services"
