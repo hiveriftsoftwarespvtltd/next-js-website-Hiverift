@@ -1,19 +1,26 @@
 name: Deploy to hiverift.com
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: self-hosted
+
     steps:
       - name: Deploy
         run: |
           cd /home/hiverift0805/nextjs_app
+
           git pull origin main
           npm install
-          rm -rf .next
           npm run build
-          cp /home/hiverift0805/nextjs_app/.htaccess /home/hiverift0805/public_html/.htaccess
-          sudo /bin/pm2 restart hiverift
-          sudo /bin/pm2 save
+
+          rm -rf /home/hiverift0805/public_html/*
+          cp -r out/* /home/hiverift0805/public_html/
+
+          if [ -f .htaccess ]; then
+            cp .htaccess /home/hiverift0805/public_html/.htaccess
+          fi
