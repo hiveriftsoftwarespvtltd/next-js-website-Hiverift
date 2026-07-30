@@ -9,11 +9,11 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          cd /home/hiveriftmain/nextapp
+          cd /home/hiverift0805/nextjs_app
           git pull origin main
           npm install
           rm -rf .next
           npm run build
-          cp /home/hiveriftmain/nextapp/.htaccess /home/hiveriftmain/public_html/.htaccess
+          cp /home/hiverift0805/nextjs_app/.htaccess /home/hiverift0805/public_html/.htaccess
           sudo /bin/pm2 restart hiverift
           sudo /bin/pm2 save
