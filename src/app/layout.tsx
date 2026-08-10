@@ -22,8 +22,43 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
+    <html lang="en" suppressHydrationWarning>
+      <head suppressHydrationWarning>
+        {/* Strip third-party extension attributes before React hydration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                if (typeof window === 'undefined') return;
+                const removeExtensionAttrs = (node) => {
+                  if (node.nodeType === 1 && node.hasAttribute('bis_skin_checked')) {
+                    node.removeAttribute('bis_skin_checked');
+                  }
+                  if (node.childNodes) {
+                    node.childNodes.forEach(removeExtensionAttrs);
+                  }
+                };
+                const observer = new MutationObserver((mutations) => {
+                  mutations.forEach((m) => {
+                    if (m.type === 'attributes' && m.attributeName === 'bis_skin_checked') {
+                      m.target.removeAttribute('bis_skin_checked');
+                    } else if (m.type === 'childList') {
+                      m.addedNodes.forEach(removeExtensionAttrs);
+                    }
+                  });
+                });
+                if (document.documentElement) {
+                  observer.observe(document.documentElement, {
+                    attributes: true,
+                    subtree: true,
+                    childList: true,
+                    attributeFilter: ['bis_skin_checked']
+                  });
+                }
+              })();
+            `,
+          }}
+        />
         {/* Facebook Pixel */}
         <Script id="fb-pixel" strategy="afterInteractive">
           {`
@@ -80,7 +115,7 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className={`antialiased ${inter.variable}`}>
+      <body className={`antialiased ${inter.variable}`} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

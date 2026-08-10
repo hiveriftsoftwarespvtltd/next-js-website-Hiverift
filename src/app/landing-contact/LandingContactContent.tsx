@@ -24,6 +24,7 @@ import {
 import { Header } from "@/app/components/Header";
 import { Footer } from "@/app/components/Footer";
 import Swal from "sweetalert2";
+import { submitContactForm } from "@/app/actions/contactActions";
 
 const services = [
   "Website Development",
@@ -68,17 +69,36 @@ export default function LandingContactContent() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const data = new FormData();
+      data.append("name", formData.name.trim());
+      data.append("phone", formData.phone.trim());
+      data.append("email", formData.email.trim());
+      data.append("service", formData.service);
+      data.append("message", `Landing Consultation Request for ${formData.service || 'Services'}`);
+
+      const result = await submitContactForm(data);
+      if (result.success) {
+        Swal.fire({
+          title: "Inquiry Sent!",
+          text: "Your request has been submitted. Our team will contact you shortly.",
+          icon: "success",
+          confirmButtonColor: "#10b981",
+        });
+        setFormData({ name: "", phone: "", email: "", service: "" });
+      } else {
+        throw new Error(result.message || "Failed to send inquiry.");
+      }
+    } catch (err: any) {
       Swal.fire({
-        title: "Success!",
-        text: "Your request has been submitted. Our team will contact you shortly.",
-        icon: "success",
-        confirmButtonColor: "#10b981",
+        title: "Submission Error",
+        text: err.message || "Something went wrong.",
+        icon: "error",
+        confirmButtonColor: "#ef4444",
       });
+    } finally {
       setIsSubmitting(false);
-      setFormData({ name: "", phone: "", email: "", service: "" });
-    }, 1500);
+    }
   };
 
   return (

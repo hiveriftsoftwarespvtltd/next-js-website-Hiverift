@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {
   Calendar,
@@ -25,89 +25,27 @@ import { Footer } from "@/app/components/Footer";
 import { FAQ } from "@/app/components/FAQ";
 import Link from "next/link";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
-
-const categories = [
-  { name: "All" },
-  { name: "Digital Marketing" },
-  { name: "SEO" },
-  { name: "Social Media Marketing" },
-  { name: "Google Ads" },
-  { name: "Content Marketing" },
-  { name: "Business Growth" }
-];
-
-const blogPosts = [
-  {
-    id: 1,
-    category: "Web Development",
-    title: "Why Your Rs. 5,000 Website Is Costing You More Than You Think",
-    desc: "Cheap websites may save money upfront but lose you customers daily. Here's the real cost of a bad website for Indian businesses.",
-    readTime: "4 min read",
-    author: "HiveRift Team",
-    date: "Jan 12, 2026",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: 2,
-    category: "Digital Marketing",
-    title: "How Indian SMEs Can Get 10x More Leads Without Doubling Their Budget",
-    desc: "Smart digital marketing doesn't mean spending more it means spending right. Here's the playbook for Indian SMEs in 2026.",
-    readTime: "5 min read",
-    author: "Marketing Desk",
-    date: "Jan 10, 2026",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: 3,
-    category: "SEO",
-    title: "Local SEO for Indian Businesses: How to Rank #1 in Your City",
-    desc: "Local SEO is the most underused growth tool for Indian small businesses. Here's a step-by-step guide to ranking in your city.",
-    readTime: "4 min read",
-    author: "SEO Specialist",
-    date: "Jan 08, 2026",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: 4,
-    category: "Mobile Apps",
-    title: "Does Your Business Actually Need a Mobile App? Here's How to Decide",
-    desc: "Not every business needs a mobile app but the ones that do see massive growth. Here's an honest guide to deciding if an app is right.",
-    readTime: "5 min read",
-    author: "App Team",
-    date: "Jan 05, 2026",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: 5,
-    category: "Business Growth",
-    title: "Why 8 Out of 10 Indian Startups Fail Online",
-    desc: "Most Indian startups make the same 5 digital mistakes. Here's what they are and how to avoid them before they cost you.",
-    readTime: "4 min read",
-    author: "Growth Lead",
-    date: "Jan 02, 2026",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: 6,
-    category: "Tech & AI",
-    title: "AI for Indian Businesses in 2026: What's Actually Useful",
-    desc: "AI is everywhere in 2026 but which AI tools actually help Indian businesses grow? Here's an honest breakdown.",
-    readTime: "5 min read",
-    author: "Tech Lab",
-    date: "Dec 28, 2025",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
-  }
-];
+import { blogPosts, BlogPost } from "@/app/data/blogData";
+import { getBlogsFromApi } from "@/app/actions/adminActions";
 
 export default function BlogContent() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [posts, setPosts] = useState<BlogPost[]>(blogPosts);
 
-  // Dynamically extract categories from blogPosts
-  const dynamicCategories = ["All", ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  useEffect(() => {
+    getBlogsFromApi(activeCategory, searchQuery).then((data) => {
+      if (data && data.length > 0) {
+        setPosts(data);
+      }
+    });
+  }, [activeCategory, searchQuery]);
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = activeCategory === "All" || post.category === activeCategory;
+  // Dynamically extract categories
+  const dynamicCategories = ["All", "Web Development", "Digital Marketing", "SEO", "Mobile Apps", "Business Growth", "Tech & AI"];
+
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory = activeCategory === "All" || post.category.toLowerCase() === activeCategory.toLowerCase();
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.desc.toLowerCase().includes(searchQuery.toLowerCase());
@@ -166,7 +104,7 @@ export default function BlogContent() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="group flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-500"
+                  className="group flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-500"
                 >
                   {/* Left: Image (Smaller) */}
                   <div className="md:w-[30%] relative aspect-video md:aspect-auto overflow-hidden">
