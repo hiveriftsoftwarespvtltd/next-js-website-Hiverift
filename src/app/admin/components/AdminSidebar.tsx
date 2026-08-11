@@ -9,12 +9,14 @@ import {
   ExternalLink,
   LogOut,
   X,
+  Inbox,
 } from "lucide-react";
 
 const navItems = [
   { name: "Blog Posts", href: "/admin/blogs", icon: FileText },
-  { name: "Careers Applications", href: "/careers", icon: Briefcase },
-  { name: "Live Website", href: "/blog", icon: ExternalLink, external: true },
+  { name: "Form Inquiries", href: "/admin/inquiries", icon: Inbox },
+  { name: "Careers Page", href: "/careers", icon: Briefcase, external: true },
+  { name: "Live Website", href: "/", icon: ExternalLink, external: true },
 ];
 
 interface AdminSidebarProps {

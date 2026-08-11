@@ -36,3 +36,46 @@ export async function submitJobApplication(formData: FormData) {
     };
   }
 }
+
+export async function getContactSubmissions() {
+  try {
+    const response = await apiClient.get(ENDPOINTS.SUBMIT_FORM);
+    return {
+      success: true,
+      data: response.data?.data || response.data || [],
+    };
+  } catch (error: any) {
+    console.error("Fetch Submissions Error:", error);
+    return {
+      success: false,
+      message: error?.response?.data?.message || error?.message || "Failed to fetch form submissions.",
+      data: [],
+    };
+  }
+}
+
+export async function deleteSubmission(id: string) {
+  try {
+    const response = await apiClient.delete(`${ENDPOINTS.SUBMIT_FORM}/${id}`);
+    return { success: true, data: response.data };
+  } catch (error: any) {
+    console.error("Delete Submission Error:", error);
+    return {
+      success: false,
+      message: error?.response?.data?.message || error?.message || "Failed to delete submission.",
+    };
+  }
+}
+
+export async function updateSubmissionStatus(id: string, status: string) {
+  try {
+    const response = await apiClient.patch(`${ENDPOINTS.SUBMIT_FORM}/${id}/status`, { status });
+    return { success: true, data: response.data };
+  } catch (error: any) {
+    console.error("Update Status Error:", error);
+    return {
+      success: false,
+      message: error?.response?.data?.message || error?.message || "Failed to update status.",
+    };
+  }
+}

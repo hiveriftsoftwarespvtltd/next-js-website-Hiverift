@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api/v1";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://hiverift.com/hiverift_api/";
 
 export const ENDPOINTS = {
   BLOGS: "/blogs",
