@@ -25,7 +25,7 @@ export function getImageUrl(image?: string): string {
     return `${base}/uploads/${cleanPath}`;
   }
 
-  const uploadServer = API_BASE_URL.replace(/\/api\/v1\/?$/, "").replace(/\/hiverift_api\/?$/, "").replace(/\/$/, "");
+  const uploadServer = API_BASE_URL.replace(/\/api\/v1\/?$/, "").replace(/\/$/, "");
   return `${uploadServer}/uploads/${cleanPath}`;
 }
 
@@ -118,7 +118,11 @@ export async function createBlogApi(blogData: any) {
     const baseUrl = API_BASE_URL.replace(/\/$/, "");
     const url = `${baseUrl}${ENDPOINTS.BLOGS}`;
     const res = await fetch(url, { method: "POST", body: blogData });
-    return await res.json();
+    const json = await res.json();
+    if (!res.ok) {
+      throw new Error(json.message || Array.isArray(json.message) ? json.message.join(", ") : `Upload failed with status ${res.status}`);
+    }
+    return json;
   }
   const response = await apiClient.post(ENDPOINTS.BLOGS, blogData);
   return response.data;
@@ -130,7 +134,11 @@ export async function updateBlogApi(id: string, blogData: any) {
     const baseUrl = API_BASE_URL.replace(/\/$/, "");
     const url = `${baseUrl}${ENDPOINTS.BLOGS}/${id}`;
     const res = await fetch(url, { method: "PATCH", body: blogData });
-    return await res.json();
+    const json = await res.json();
+    if (!res.ok) {
+      throw new Error(json.message || Array.isArray(json.message) ? json.message.join(", ") : `Update failed with status ${res.status}`);
+    }
+    return json;
   }
   const response = await apiClient.patch(`${ENDPOINTS.BLOGS}/${id}`, blogData);
   return response.data;
