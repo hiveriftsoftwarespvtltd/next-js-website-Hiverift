@@ -11,10 +11,8 @@ export function getImageUrl(image?: string): string {
   const cleanPath = image.replace(/^\/?(uploads\/)?/, "");
 
   const isLocalEnv =
-    process.env.NODE_ENV === "development" ||
     API_BASE_URL.includes("localhost") ||
-    API_BASE_URL.includes("127.0.0.1") ||
-    (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"));
+    API_BASE_URL.includes("127.0.0.1");
 
   if (isLocalEnv) {
     return `http://localhost:4000/uploads/${cleanPath}`;

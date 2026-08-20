@@ -313,16 +313,12 @@ export function BlogFormModal({
                     <div className="sm:col-span-6 space-y-2">
                       <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 shadow-md group">
                         <img
-                          key={previewUrl}
                           src={previewUrl}
                           alt="Cover Preview"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            if (!target.src.includes("unsplash.com")) {
-                              target.src =
-                                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
-                            }
+                            (e.target as HTMLImageElement).src =
+                              "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
                           }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-3">

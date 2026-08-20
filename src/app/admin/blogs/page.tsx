@@ -282,15 +282,11 @@ export default function AdminBlogsPage() {
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
                                 <img
-                                  key={String(blog.image || blog.id)}
                                   src={getImageUrl(blog.image)}
                                   alt={blog.title}
                                   className="w-full h-full object-cover"
                                   onError={(e) => {
-                                    const target = e.target as HTMLImageElement;
-                                    if (!target.src.includes("unsplash.com")) {
-                                      target.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
-                                    }
+                                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
                                   }}
                                 />
                               </div>
