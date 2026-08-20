@@ -9,7 +9,22 @@ export function getImageUrl(image?: string): string {
     return image;
   }
   const cleanPath = image.replace(/^\/?(uploads\/)?/, "");
-  const uploadServer = process.env.NEXT_PUBLIC_UPLOADS_URL || API_BASE_URL.replace(/\/api\/v1\/?$/, "").replace(/\/hiverift_api\/?$/, "").replace(/\/$/, "");
+
+  if (process.env.NEXT_PUBLIC_UPLOADS_URL) {
+    const base = process.env.NEXT_PUBLIC_UPLOADS_URL.replace(/\/$/, "");
+    return `${base}/uploads/${cleanPath}`;
+  }
+
+  const isLocalEnv =
+    (typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) ||
+    API_BASE_URL.includes("localhost") ||
+    API_BASE_URL.includes("127.0.0.1");
+
+  if (isLocalEnv) {
+    return `http://localhost:4000/uploads/${cleanPath}`;
+  }
+
+  const uploadServer = API_BASE_URL.replace(/\/api\/v1\/?$/, "").replace(/\/hiverift_api\/?$/, "").replace(/\/$/, "");
   return `${uploadServer}/uploads/${cleanPath}`;
 }
 
