@@ -10,11 +10,6 @@ export function getImageUrl(image?: string): string {
   }
   const cleanPath = image.replace(/^\/?(uploads\/)?/, "");
 
-  if (process.env.NEXT_PUBLIC_UPLOADS_URL) {
-    const base = process.env.NEXT_PUBLIC_UPLOADS_URL.replace(/\/$/, "");
-    return `${base}/uploads/${cleanPath}`;
-  }
-
   const isLocalEnv =
     process.env.NODE_ENV === "development" ||
     API_BASE_URL.includes("localhost") ||
@@ -23,6 +18,11 @@ export function getImageUrl(image?: string): string {
 
   if (isLocalEnv) {
     return `http://localhost:4000/uploads/${cleanPath}`;
+  }
+
+  if (process.env.NEXT_PUBLIC_UPLOADS_URL) {
+    const base = process.env.NEXT_PUBLIC_UPLOADS_URL.replace(/\/$/, "");
+    return `${base}/uploads/${cleanPath}`;
   }
 
   const uploadServer = API_BASE_URL.replace(/\/api\/v1\/?$/, "").replace(/\/hiverift_api\/?$/, "").replace(/\/$/, "");
