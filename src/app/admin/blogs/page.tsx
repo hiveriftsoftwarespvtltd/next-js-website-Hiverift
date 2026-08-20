@@ -24,6 +24,7 @@ import { BlogFormModal } from "./components/BlogFormModal";
 import { BlogPost } from "@/app/data/blogData";
 import {
   getBlogsFromApi,
+  getImageUrl,
   createBlogApi,
   updateBlogApi,
   deleteBlogApi,
@@ -59,7 +60,8 @@ export default function AdminBlogsPage() {
   const handleSaveBlog = async (formData: FormData) => {
     try {
       if (editingBlog) {
-        await updateBlogApi(String(editingBlog.id), formData);
+        const targetId = String(editingBlog.id || (editingBlog as any)._id);
+        await updateBlogApi(targetId, formData);
         Swal.fire({ icon: "success", title: "Updated!", text: "Blog post updated successfully." });
       } else {
         await createBlogApi(formData);
@@ -67,7 +69,7 @@ export default function AdminBlogsPage() {
       }
       setIsModalOpen(false);
       setEditingBlog(null);
-      fetchBlogs();
+      await fetchBlogs();
     } catch (err: any) {
       Swal.fire({ icon: "error", title: "Error", text: err.message || "Failed to save blog." });
     }
@@ -280,9 +282,12 @@ export default function AdminBlogsPage() {
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
                                 <img
-                                  src={blog.image}
+                                  src={getImageUrl(blog.image)}
                                   alt={blog.title}
                                   className="w-full h-full object-cover"
+                                  onError={(e) => {
+                                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
+                                  }}
                                 />
                               </div>
                               <div className="min-w-0 max-w-md">

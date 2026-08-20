@@ -1,4 +1,4 @@
-import { apiClient, ENDPOINTS } from "@/app/config/api.config";
+import { apiClient, ENDPOINTS, API_BASE_URL } from "@/app/config/api.config";
 
 export async function submitContactForm(formData: FormData) {
   try {
@@ -24,9 +24,15 @@ export async function submitContactForm(formData: FormData) {
 
 export async function submitJobApplication(formData: FormData) {
   try {
-    const response = await apiClient.post(ENDPOINTS.SUBMIT_FORM, formData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    const isFormData = typeof FormData !== "undefined" && formData instanceof FormData;
+    if (isFormData) {
+      const baseUrl = API_BASE_URL.replace(/\/$/, "");
+      const url = `${baseUrl}${ENDPOINTS.SUBMIT_FORM}`;
+      const res = await fetch(url, { method: "POST", body: formData });
+      const json = await res.json();
+      return { success: true, data: json };
+    }
+    const response = await apiClient.post(ENDPOINTS.SUBMIT_FORM, formData);
     return { success: true, data: response.data };
   } catch (error: any) {
     console.error("Job Application Submission Error:", error);

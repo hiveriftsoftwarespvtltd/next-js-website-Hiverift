@@ -145,6 +145,9 @@ export default function BlogDetailContent({ post }: BlogDetailContentProps) {
                 src={currentPost.image}
                 alt={currentPost.title}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
             </div>
@@ -327,6 +330,9 @@ export default function BlogDetailContent({ post }: BlogDetailContentProps) {
                           src={rPost.image}
                           alt={rPost.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
+                          }}
                         />
                       </div>
                       <div>
@@ -420,6 +426,9 @@ export default function BlogDetailContent({ post }: BlogDetailContentProps) {
                         src={rPost.image}
                         alt={rPost.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
+                        }}
                       />
                       <span className="absolute top-4 left-4 px-3 py-1 bg-white/95 backdrop-blur-md rounded-lg text-[10px] font-black text-emerald-600 uppercase tracking-widest shadow-sm">
                         {rPost.category}

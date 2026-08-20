@@ -21,7 +21,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
-  Tag
+  Tag,
+  Download
 } from "lucide-react";
 
 interface SubmissionItem {
@@ -153,6 +154,109 @@ export default function AdminInquiriesPage() {
     setCurrentPage(1);
   }, [searchQuery, activeTab]);
 
+  const handleDownloadCSV = () => {
+    // Filter strictly for Contact Leads (excluding job applicants)
+    const contactLeads = submissions.filter((item) => {
+      if (isJobApp(item)) return false;
+      if (!searchQuery.trim()) return true;
+      const q = searchQuery.toLowerCase();
+      const nameStr = (item.fullName || item.name || "").toLowerCase();
+      const emailStr = (item.email || "").toLowerCase();
+      const phoneStr = (item.phone || "").toLowerCase();
+      const serviceStr = (item.service || "").toLowerCase();
+      const companyStr = (item.company || "").toLowerCase();
+      return (
+        nameStr.includes(q) ||
+        emailStr.includes(q) ||
+        phoneStr.includes(q) ||
+        serviceStr.includes(q) ||
+        companyStr.includes(q)
+      );
+    });
+
+    if (contactLeads.length === 0) return;
+
+    const headers = [
+      "Name",
+      "Email",
+      "Phone",
+      "Service Requested",
+      "Company Name",
+      "Status",
+      "Submitted Date",
+      "Message / Project Details"
+    ];
+
+    const escapeCSV = (str: string | undefined | null) => {
+      if (!str) return '""';
+      const escaped = String(str).replace(/"/g, '""');
+      return `"${escaped}"`;
+    };
+
+    // Format phone number to strictly 10 digits without any extra words, spaces, or prefixes
+    const formatPhone10Digits = (phoneStr: string | undefined | null) => {
+      if (!phoneStr) return "";
+      const digitsOnly = String(phoneStr).replace(/\D/g, "");
+      if (digitsOnly.length > 10 && digitsOnly.startsWith("91")) {
+        return digitsOnly.slice(-10);
+      }
+      if (digitsOnly.length >= 10) {
+        return digitsOnly.slice(-10);
+      }
+      return digitsOnly;
+    };
+
+    const escapePhoneCSV = (phoneStr: string | undefined | null) => {
+      const clean = formatPhone10Digits(phoneStr);
+      if (!clean) return '""';
+      // Format as ="7550553955" so Excel treats it strictly as text string and avoids scientific notation (7.55E+09)
+      return `="${clean}"`;
+    };
+
+    const rows = contactLeads.map((item) => {
+      const name = item.fullName || item.name || "N/A";
+      const email = item.email || "N/A";
+      const phone = escapePhoneCSV(item.phone);
+      const service = item.service || "General Inquiry";
+      const company = item.company || "N/A";
+      const status = item.status || "Pending";
+      const date = item.createdAt
+        ? new Date(item.createdAt).toLocaleString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          })
+        : "N/A";
+      const msg = item.message || item.coverLetter || "";
+
+      return [
+        escapeCSV(name),
+        escapeCSV(email),
+        phone,
+        escapeCSV(service),
+        escapeCSV(company),
+        escapeCSV(status),
+        escapeCSV(date),
+        escapeCSV(msg)
+      ].join(",");
+    });
+
+    const csvData = [headers.join(","), ...rows].join("\n");
+    const blob = new Blob(["\uFEFF" + csvData], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `hiverift_contact_leads_${new Date().toISOString().slice(0, 10)}.csv`
+    );
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const totalCount = submissions.length;
   const contactCount = submissions.filter((item) => !isJobApp(item)).length;
   const careersCount = submissions.filter((item) => isJobApp(item)).length;
@@ -270,7 +374,7 @@ export default function AdminInquiriesPage() {
                 </button>
               </div>
 
-              {/* Search Bar & Refresh */}
+              {/* Search Bar, CSV Download & Refresh */}
               <div className="flex items-center gap-3 w-full md:w-auto">
                 <div className="relative flex-1 md:w-72">
                   <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
@@ -282,6 +386,17 @@ export default function AdminInquiriesPage() {
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-4 py-2.5 text-xs font-semibold text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:bg-white transition-all"
                   />
                 </div>
+
+                <button
+                  onClick={handleDownloadCSV}
+                  disabled={contactCount === 0}
+                  className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs uppercase tracking-wider rounded-xl transition-all flex items-center gap-2 shadow-md shadow-emerald-200 disabled:opacity-50 shrink-0 cursor-pointer"
+                  title="Download Contact Leads CSV"
+                >
+                  <Download size={15} />
+                  <span>Download Leads CSV</span>
+                </button>
+
                 <button
                   onClick={fetchSubmissions}
                   disabled={isLoading}

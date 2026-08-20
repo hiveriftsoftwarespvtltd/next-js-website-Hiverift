@@ -35,7 +35,7 @@ export default function BlogContent() {
 
   useEffect(() => {
     getBlogsFromApi(activeCategory, searchQuery).then((data) => {
-      if (data && data.length > 0) {
+      if (data) {
         setPosts(data);
       }
     });
@@ -112,6 +112,9 @@ export default function BlogContent() {
                       src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
+                      }}
                     />
                     <div className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 backdrop-blur-md rounded-lg text-[9px] font-black text-emerald-600 tracking-widest uppercase shadow-sm border border-white/20">
                       {post.category}
@@ -213,10 +216,17 @@ export default function BlogContent() {
               <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
                 <h3 className="text-lg font-black text-gray-900 mb-6 tracking-tight">Latest Posts</h3>
                 <div className="space-y-6">
-                  {blogPosts.slice(0, 4).map((post, i) => (
+                  {posts.slice(0, 4).map((post, i) => (
                     <Link key={i} href={`/blog/${post.id}`} className="flex items-center gap-4 group">
                       <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
-                        <img src={post.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800";
+                          }}
+                        />
                       </div>
                       <div className="space-y-1">
                         <h4 className="text-sm font-black text-gray-900 line-clamp-2 leading-tight group-hover:text-emerald-600 transition-colors">{post.title}</h4>
